@@ -7,7 +7,6 @@ public class Movement : MonoBehaviour
     public float jump;
     private float Move;
     public bool isJumping;
-    public CoinCollection cc;
 
     private Rigidbody2D character;
     void Start()
@@ -61,15 +60,7 @@ public class Movement : MonoBehaviour
         this._speed = speed;
     }
 
-    //Danica- score system
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Coin"))
-        {
-            Destroy(other.gameObject);
-            cc.Score++;
-        }
-    }
+
 
     
 }
